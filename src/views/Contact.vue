@@ -10,8 +10,8 @@
       </div>
       <div class="boxcontact">
           <EmailIcon
-        width="250"
-        height="250"/>
+        width="230"
+        height="230"/>
         <h2>fahimgha@protonmail.com</h2>
         <a>Telecharger mon CV (PDF)</a><br>
         <div class="logocontact">        

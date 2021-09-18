@@ -5,6 +5,7 @@
     <About/>
     <Projects/>
     <Contact/>
+    <Credits/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import About from '@/views/About'
 import Navbar from '@/components/Navbar'
 import Projects from '@/views/Projects'
 import Contact from '@/views/Contact'
+import Credits from '@/views/Credits'
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     Home,
     About,
     Projects,
-    Contact
+    Contact, 
+    Credits
   }
 }
 </script>

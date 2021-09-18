@@ -2,9 +2,9 @@
   <div class="about">
     <h1 class="aboutme">/About Me</h1>
     <h1 class="descabt">My name is Fahim GHARSA. I studying Computer Science at Paris.<br> I am did 2 months internship as an trainee web developper.
-    I'm interested in Web developpement and Web design. I like design and code beautifully simple things and I love what I do.<br>I've started frontend development for over 2 years now.
-    I'm constantly in the process of learning. Over the past two years, I've worked hard to enhance my skills, using the following tools.<br>
-    NodeJs, Vuejs, Javascript, HTML & CSS</h1>
+    I'm interested in Web developpement and Web design. I like design and code beautifully simple things and I love what I do. I've started frontend development for over 2 years now. I'm constantly in the process of learning. Over the past two years, I've worked hard to enhance my skills, using the following tools :<br>
+    </h1>
+    <h3>NodeJs, Java, Vuejs, Javascript, HTML & CSS</h3>
   </div>
 </template>
 
