@@ -37,8 +37,8 @@ const postList = [
 ];
 export default {
   name: 'Projects',
-  el: '#projects', // what we bind the view to
-  data() { // bindings
+  el: '#projects',
+  data() { 
   return {
     keyword: '',
     posts: postList,
@@ -48,7 +48,7 @@ export default {
   }
     
   },
-  methods: { // like the controller...
+  methods: { 
     toggleOnOff() {
       this.onOff = !this.onOff;
     },
@@ -97,7 +97,7 @@ div#projects {
     //max-width: 350px;
     margin: 12px;
     transition: .15s all ease-in-out;
-    &:hover {
+    &:hover { 
       transform: scale(1.1);
     }
     .boxname{

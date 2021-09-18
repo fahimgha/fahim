@@ -38,6 +38,9 @@ export default {
   bottom: 40%; //test avec 10%
 }
 a {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
   letter-spacing: 0em;
   line-height: 1.6em;
   font-size: 19px;
