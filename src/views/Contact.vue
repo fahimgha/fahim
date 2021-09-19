@@ -2,7 +2,7 @@
   <div id="contact">
     <div class="endfirst">
       <h1 class="contactme">/Contact Me</h1>
-      <h2 class="text">Thanks for scrolling all the way here!</h2>
+      <h2 class="textt">Thanks for scrolling all the way here!</h2>
     </div>
     <div class="end">
       <div class="img">
@@ -71,7 +71,7 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-.text{
+.textt{
   font-family: Quicksand;
   font-style: normal;
   font-weight: bold;

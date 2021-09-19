@@ -34,7 +34,7 @@ export default {
   align-items: flex-end;
   position: fixed;
   right: 0;
-  padding-right: 5%;
+  padding-right: 3%;
   bottom: 40%; //test avec 10%
 }
 a {
