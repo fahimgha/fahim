@@ -1,10 +1,11 @@
 <template>
-  <div class="about">
-    <h1 class="aboutme">/About Me</h1>
+  <div id="about" >
+    <h1 class="aboutme ">/About Me</h1>
     <h1 class="descabt">My name is Fahim GHARSA. I studying Computer Science at Paris.<br> I am did 2 months internship as an trainee web developper.
     I'm interested in Web developpement and Web design. I like design and code beautifully simple things and I love what I do. I've started frontend development for over 2 years now. I'm constantly in the process of learning. Over the past two years, I've worked hard to enhance my skills, using the following tools :<br>
     </h1>
     <h3>NodeJs, Java, Vuejs, Javascript, HTML & CSS</h3>
+    
   </div>
 </template>
 
@@ -13,13 +14,14 @@
 export default {
   name: 'About',
   components: {
-  }
+  },
+  
 }
 </script>
 
 <style lang="scss">
 
-.about{
+#about{
   margin: 10% 27% 0 10%;
 }
 .aboutme{
@@ -33,7 +35,7 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-  .about{
+  #about{
     padding-top: 15px;
     margin: 0 50px;
     align-items: center;

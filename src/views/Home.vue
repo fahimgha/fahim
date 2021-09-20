@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <div class="intro">
       <div class="logo"><Logo/></div>
       <h1 class="name">Hi there, My name is Fahim. <br>
@@ -7,6 +7,7 @@
       from Paris, France.</h1>
       <h1 class="desc">Currently doing fullstack web development and web design</h1>
     </div>
+    
   </div>
 </template>
 

@@ -3,26 +3,36 @@
     <div class="nav">
         <ul>
           <li>
-            <a href="#Home" >/Home</a>
+            <a @click="(reloadPage())">/Home</a>
           </li>
           <li>
-            <a href="#About" >/About</a>
+            <a v-on:click="scroll(`about`)">/About</a>
           </li>
           <li>
-            <a href="#Projects" >/Projects</a>
+            <a v-on:click="scroll(`projects`)">/Projects</a>
           </li>
           <li>
-            <a href="#Contact" >/Contact</a>
+            <a v-on:click="scroll(`contact`)">/Contact</a>
           </li>
         </ul>
       </div>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'Navbar',
-
+  methods: {
+    scroll(id) {  
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+      });
+    },
+    reloadPage(){
+    window.location.reload()
+  }  
+  },
 }
 </script>
 

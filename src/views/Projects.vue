@@ -11,6 +11,7 @@
           </div>
         </div>
     </div>
+    
 </div>
 
 </template>
@@ -32,7 +33,7 @@ const postList = [
       new Post(
         'Never Alone', 
         'Java / AndroidStudio / Firebase', 
-        'Application allowing to locate his friends in real time with his phone.it is a real-time GPS tracking application using the Google Maps API. '
+        'Application allowing to locate his friends in real time with his phone. It is a real-time GPS tracking application using the Google Maps API. '
       ),
 ];
 export default {

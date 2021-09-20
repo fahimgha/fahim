@@ -1,17 +1,16 @@
 <template>
-  <div id="app" >
+  <div id="app" class="app">
     <Navbar/>
-    
     <Progressbar :value="progress"></Progressbar>
     <div
       class="text-section"
       ref="text"
       @scroll="onScroll"
     >
-      <Home/>
-      <About/>
-      <Projects/>
-      <Contact/>
+      <Home></Home>
+      <About class="about"></About>
+      <Projects class="project"></Projects>
+      <Contact class="contact"></Contact>
       <Credits/> 
       </div>
     
