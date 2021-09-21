@@ -1,8 +1,8 @@
 <template>
   <div id="contact">
-    <div class="endfirst">
-      <h1 class="contactme">/Contact Me</h1>
-      <h2 class="textt">Thanks for scrolling all the way here!</h2>
+    <div class="contact-section">
+      <h1 class="section-title">/Contact Me</h1>
+      <h2 class="end-text">Thanks for scrolling all the way here!</h2>
     </div>
     <div class="end">
       <div class="img">
@@ -10,9 +10,9 @@
       </div>
       <div class="boxcontact">
           <EmailIcon
-        width="230"
-        height="230"/>
-        <h2>fahimgha@protonmail.com</h2>
+        width="210"
+        height="210"/>
+        <h2 class="email">fahimgha@protonmail.com</h2>
         <a>Telecharger mon CV (PDF)</a><br>
         <div class="logocontact">        
           <a href="https://github.com/fahimgha"><GithubIcon
@@ -22,10 +22,8 @@
           <LinkedinIcon
           width="70"
           height="70"/></a></div>
-
       </div>
     </div> 
-    
   </div>
 </template>
 
@@ -51,20 +49,17 @@ export default {
 #contact{
   display: flex;
   flex-direction: column;
-  margin-top: 2%;
+  padding-top: 5%;
 }
-.endfirst{
-  margin-left: 10%;
+.contact-section{
+  padding-left: 10%;
 }
 .end {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-}
-.contactme{
-  color: var(--text-secondary-color);
-  font-size: 45px;
+  padding:unset;
 }
 .boxcontact{
   display: flex;
@@ -72,16 +67,18 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-.textt{
+.end-text{
   font-family: Quicksand;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 20px;
   line-height: 25px;
-  color: #FFC56E;
 }
 .img{
   margin:13px;
+}
+.email{
+  margin: 0;
 }
 a{
   color: var(--text-secondary-color);
@@ -91,13 +88,15 @@ a:hover{
 }
 @media only screen and (max-width: 600px) {
   #contact{
-    padding-top: 15px;
-    margin: 0 50px;
+    padding-right: 40px;
+    padding-left: 40px;
     align-items: center;
   }
-  .contactme{
+  .contact-section{
+    padding: 0;
+  }
+  .section-title{
   font-size: 25px;
   }
 }
-
 </style>

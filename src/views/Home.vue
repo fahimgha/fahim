@@ -1,13 +1,10 @@
 <template>
   <div id="home">
-    <div class="intro">
       <div class="logo"><Logo/></div>
-      <h1 class="name">Hi there, My name is Fahim. <br>
+      <h1 class="intro">Hi there, My name is Fahim. <br>
       I'm a Computer Science student <br>
       from Paris, France.</h1>
-      <h1 class="desc">Currently doing fullstack web development and web design</h1>
-    </div>
-    
+      <h1 class="intro-desc">Currently doing fullstack web development and web design</h1>
   </div>
 </template>
 
@@ -25,34 +22,36 @@ export default {
 
 <style lang="scss">
 
-.intro{
+#home{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 12% 20% 0 10%;
+  padding-left: 10%;
+  padding-top: 10%;
 }
-.name{
+.intro{
   font-size: 50px;
 }
-.desc{
+.intro-desc{
+  margin: 0;
+  font-weight: normal;
   font-size: 22px;
 }
 @media only screen and (max-width: 600px) {
+  #home{
+  align-items: center;
+  padding: 0;
+  }
   .logo {
     display: none;
   }
-  .intro {
-    padding-top: 15px;
-    margin: 0;
-    align-items: center;
-  }
-  .name{
+  .intro{
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   }
-.desc{
+.intro-desc{
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   }
 }
 </style>

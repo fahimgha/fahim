@@ -38,6 +38,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
 .nav {  
   display: flex;  
   flex-direction: column;
@@ -59,12 +72,20 @@ a {
   font-weight: bold;
   text-decoration: none !important;
   color: var(--text-secondary-color);
-}
-a:hover{
+  &.router-link-exact-active{
   color: var(--text-primary-color);
 }
+}
+
 li{
   list-style: none;
+}
+
+@media only screen and (max-width: 600px){
+
+#navbar {
+display: none;
+} 
 }
 
 </style>

@@ -1,16 +1,16 @@
 <template>
 <div id="projects">
-  <div class="Projects">
-      <h1 class="prj">/My Projects</h1>
+  
+      <h1 class="section-title">/My Projects</h1>
         <div class="wrapper">
           <div :key="post.id" class="card" v-for="post in filteredList">
-            <div class="boxname">
-              <h2 class="nameproject">{{ post.title }}</h2></div>
+            <div class="box">
+              <h2 class="project-name">{{ post.title }}</h2></div>
             <h3 class="tools">{{ post.tools }}</h3>
             <p class="descproj">{{ post.desc }}</p>
           </div>
         </div>
-    </div>
+    
     
 </div>
 
@@ -64,25 +64,16 @@ export default {
 
 <style lang="scss">
 
+#projects {
+  padding-left: 10%;
+  padding-top: 5%;
+}
 
-.Projects {
-  padding: 3% 27% 0 10%;
-}
-.prj{
-  color: var(--text-secondary-color);
-  font-size: 45px;
-}
-body {
-  background-color: #21232f;
-}
 
 div#projects {
-  
   display: flex;
   flex-direction: column;
-
   .wrapper {
-
     display: flex;
     max-width: 750px;
     flex-wrap: wrap;
@@ -95,13 +86,12 @@ div#projects {
     border: 2px solid #FFC56E;
     box-sizing: border-box;
     border-radius: 10px;
-    //max-width: 350px;
     margin: 12px;
     transition: .15s all ease-in-out;
     &:hover { 
       transform: scale(1.1);
     }
-    .boxname{
+    .box{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -113,7 +103,7 @@ div#projects {
       border: 2px solid #FFC56E;
       box-sizing: border-box;
       border-radius: 10px;
-      .nameproject{
+      .project-name{
         color: white;
         font-family: 'Quicksand', sans-serif;
         font-size: 25px;
@@ -158,5 +148,18 @@ div#projects {
     }
   }
 }
-
+@media only screen and (max-width: 600px) {
+  #projects{
+    padding-right: 40px;
+    padding-left: 40px;
+    
+  }
+  .wrapper{
+    align-items: center;
+    justify-content: center;
+  }
+  .section-title{
+  font-size: 25px;
+  }
+}
 </style>

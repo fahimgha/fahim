@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app">
     <Navbar/>
     <Progressbar :value="progress"></Progressbar>
     <div
@@ -8,9 +8,9 @@
       @scroll="onScroll"
     >
       <Home></Home>
-      <About class="about"></About>
-      <Projects class="project"></Projects>
-      <Contact class="contact"></Contact>
+      <About></About>
+      <Projects></Projects>
+      <Contact></Contact>
       <Credits/> 
       </div>
     
@@ -61,6 +61,7 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
+
 :root {
   --background-color-primary:#191919;
   --background-color-secondary: #848582;
@@ -68,7 +69,10 @@ export default {
   --text-secondary-color:#FFC56E;
   --element-size: 4rem;
 }
-
+::-webkit-scrollbar {
+    display: block;
+    display: none;
+}
 html,
 body {
   background: var(--background-color-primary);
@@ -80,32 +84,18 @@ body {
   color:var(--text-primary-color);
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  // text-align: center;
 }
 
 h1{
   font-size: 40pt;
 }
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 .text-section {
-  height: 100%;
-  max-height: 100%;
-  padding: 0 10px 10px;
+  width: 100vw;
   overflow: scroll;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
+
 </style>
