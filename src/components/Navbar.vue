@@ -1,18 +1,18 @@
 <template>
   <div id="navbar">
-    <div class="nav">
+    <div class="nav" >
         <ul>
           <li>
-            <a @click="(reloadPage())">/Home</a>
+            <a data-aos="fade-up" @click="(reloadPage())">/Home</a>
           </li>
           <li>
-            <a v-on:click="scroll(`about`)">/About</a>
+            <a data-aos="fade-up" data-aos-delay="100" v-on:click="scroll(`about`)">/About</a>
           </li>
           <li>
-            <a v-on:click="scroll(`projects`)">/Projects</a>
+            <a data-aos="fade-up" data-aos-delay="200" v-on:click="scroll(`projects`)">/Projects</a>
           </li>
           <li>
-            <a v-on:click="scroll(`contact`)">/Contact</a>
+            <a data-aos="fade-up" data-aos-delay="300" v-on:click="scroll(`contact`)">/Contact</a>
           </li>
         </ul>
       </div>

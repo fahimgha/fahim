@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <Navbar/>
-    <Progressbar :value="progress"></Progressbar>
+    <!-- <Progressbar :value="progress"></Progressbar>
     <div
       class="text-section"
       ref="text"
       @scroll="onScroll"
-    >
+    > -->
       <Home></Home>
       <About></About>
       <Projects></Projects>
       <Contact></Contact>
       <Credits/> 
-      </div>
+      <!-- </div> -->
     
   </div>
 </template>
 
 <script>
-import Progressbar from '@/components/Progressbar'
+// import Progressbar from '@/components/Progressbar'
 import Home from '@/views/Home'
 import About from '@/views/About'
 import Navbar from '@/components/Navbar'
@@ -29,7 +29,6 @@ import Credits from '@/views/Credits'
 export default {
   name: 'App',
   components: {
-    Progressbar,
     Navbar,
     Home,
     About,
@@ -69,10 +68,10 @@ export default {
   --text-secondary-color:#FFC56E;
   --element-size: 4rem;
 }
-::-webkit-scrollbar {
-    display: block;
-    display: none;
-}
+// ::-webkit-scrollbar {
+//     display: block;
+//     display: none;
+// }
 html,
 body {
   background: var(--background-color-primary);
@@ -84,18 +83,18 @@ body {
   color:var(--text-primary-color);
   height: 100vh;
   display: flex;
-  flex-direction: row;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  flex-direction: column;
+  //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 h1{
   font-size: 40pt;
 }
 
-.text-section {
-  width: 100vw;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
+// .text-section {
+//   width: 100vw;
+//   overflow: scroll;
+//   -webkit-overflow-scrolling: touch;
+// }
 
 </style>

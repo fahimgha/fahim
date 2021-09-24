@@ -1,9 +1,9 @@
 <template>
 <div id="projects">
   
-      <h1 class="section-title">/My Projects</h1>
-        <div class="wrapper">
-          <div :key="post.id" class="card" v-for="post in filteredList">
+      <h1 data-aos="fade-up" class="section-title">/My Projects</h1>
+        <div data-aos="fade-left" data-aos-delay="300"  class="wrapper">
+          <div   :key="post.id" class="card" v-for="post in filteredList">
             <div class="box">
               <h2 class="project-name">{{ post.title }}</h2></div>
             <h3 class="tools">{{ post.tools }}</h3>

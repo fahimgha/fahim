@@ -1,10 +1,10 @@
 <template>
   <div id="home">
-      <div class="logo"><Logo/></div>
-      <h1 class="intro">Hi there, My name is Fahim. <br>
+      <div class="logo "><Logo/></div>
+      <h1 class="intro" data-aos="fade-up">Hi there, My name is Fahim. <br>
       I'm a Computer Science student <br>
       from Paris, France.</h1>
-      <h1 class="intro-desc">Currently doing fullstack web development and web design</h1>
+      <h1 class="intro-desc" data-aos="fade-up" data-aos-delay="100" >Currently doing fullstack web development and web design</h1>
   </div>
 </template>
 
@@ -15,8 +15,8 @@ import Logo from '@/assets/logoF.vue'
 export default {
   name: 'Home',
   components: {
-    Logo,
-  }
+    Logo
+  },
 }
 </script>
 
@@ -37,6 +37,25 @@ export default {
   font-weight: normal;
   font-size: 22px;
 }
+
+// .fade-up {
+// 	opacity: 0;
+// 	animation: fade-up 1s forwards cubic-bezier(.2, 2, .4, 1);
+// }
+// 	h1.fade-up {
+		
+// 		animation-delay: .25s;
+// 	}
+//   @keyframes fade-up {
+// 	from {
+// 		transform: translateY(80px);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: none;
+// 		opacity: 1;
+// 	}
+// }
 @media only screen and (max-width: 600px) {
   #home{
   align-items: center;

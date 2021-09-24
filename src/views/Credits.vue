@@ -1,6 +1,6 @@
 <template>
   <div id="credits">
-          <div className="end-credits">
+          <div data-aos="fade-up" className="end-credits">
             <div>Built and designed by Fahim Gharsa. </div>
             <div>All rights reserved. ©</div>
           </div>

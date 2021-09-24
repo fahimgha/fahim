@@ -1,27 +1,28 @@
 <template>
   <div id="contact">
     <div class="contact-section">
-      <h1 class="section-title">/Contact Me</h1>
-      <h2 class="end-text">Thanks for scrolling all the way here!</h2>
+      <h1 data-aos="fade-up" class="section-title">/Contact Me</h1>
+      <h2 data-aos="fade-up" class="end-text">Thanks for scrolling all the way here!</h2>
     </div>
     <div class="end">
-      <div class="img">
+      <div data-aos="fade-right" data-aos-delay="100" class="img">
         <img src="../assets/me.png" alt="">
       </div>
-      <div class="boxcontact">
+      <div data-aos="fade-up" data-aos-delay="100" class="box-contact">
           <EmailIcon
         width="210"
         height="210"/>
-        <h2 class="email">fahimgha@protonmail.com</h2>
-        <a>Telecharger mon CV (PDF)</a><br>
-        <div class="logocontact">        
+        <h2 class="email">fahimgharsa@protonmail.com</h2>
+        <!-- <a href="/fahimgharsa.pdf">Download my resume (PDF)</a> -->
+        <div class="logo-contact">        
           <a href="https://github.com/fahimgha"><GithubIcon
         width="70"
         height="70"/></a>
           <a href="https://www.linkedin.com/in/fahim-gharsa/"> 
           <LinkedinIcon
           width="70"
-          height="70"/></a></div>
+          height="70"/></a>
+        </div>
       </div>
     </div> 
   </div>
@@ -61,7 +62,7 @@ export default {
   justify-content: space-evenly;
   padding:unset;
 }
-.boxcontact{
+.box-contact{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +79,7 @@ export default {
   margin:13px;
 }
 .email{
-  margin: 0;
+  margin-top: 0;
 }
 a{
   color: var(--text-secondary-color);
@@ -86,6 +87,7 @@ a{
 a:hover{
   color: var(--text-primary-color);
 }
+
 @media only screen and (max-width: 600px) {
   #contact{
     padding-right: 40px;
