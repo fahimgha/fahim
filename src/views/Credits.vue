@@ -21,6 +21,7 @@ export default {
   display: flex;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 .end-credits{

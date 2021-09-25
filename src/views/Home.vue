@@ -1,7 +1,7 @@
 <template>
   <div id="home">
       <div class="logo "><Logo/></div>
-      <h1 class="intro" data-aos="fade-up">Hi there, My name is Fahim. <br>
+      <h1 class="intro" data-aos="fade-up">Hi there, my name is Fahim. <br>
       I'm a Computer Science student <br>
       from Paris, France.</h1>
       <h1 class="intro-desc" data-aos="fade-up" data-aos-delay="100" >Currently doing fullstack web development and web design</h1>

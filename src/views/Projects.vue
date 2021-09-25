@@ -28,7 +28,7 @@ const postList = [
       new Post(
         'Kids Coding', 
         'VueJs / HTML&CSS / Bootstrap / Firebase', 
-        'A learning platform for children to learn to learn about programming. A website giving both the theoretical bases of of algorithms and web programming.'
+        'A learning platform for children to learn about programming. A website giving both the theoretical bases of algorithms and web programming.'
       ),
       new Post(
         'Never Alone', 
