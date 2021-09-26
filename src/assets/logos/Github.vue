@@ -18,11 +18,11 @@ export default {
     },
     width: {
       type: [Number, String],
-      default: 70
+      default: 40
     },
     height: {
       type: [Number, String],
-      default: 70
+      default: 40
     },
     iconColor: {
       type: String,

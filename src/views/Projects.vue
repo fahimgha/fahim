@@ -4,8 +4,19 @@
       <h1 data-aos="fade-up" class="section-title">/My Projects</h1>
         <div data-aos="fade-left" data-aos-delay="300"  class="wrapper">
           <div   :key="post.id" class="card" v-for="post in filteredList">
+            <div class="header-card">
             <div class="box">
               <h2 class="project-name">{{ post.title }}</h2></div>
+              <div class="link">
+                <a :href="post.repo"><GithubIcon
+                width="40"
+                height="50"
+                iconColor='#ffffff'/></a>
+                <a v-if="post.link.length" :href="post.link"><LinkIcon
+                width="30"
+                height="50"
+                iconColor='#ffffff'/></a></div>
+                </div>
             <h3 class="tools">{{ post.tools }}</h3>
             <p class="descproj">{{ post.desc }}</p>
           </div>
@@ -15,10 +26,15 @@
 </div>
 
 </template>
+
 <script>
+import GithubIcon from '@/assets/logos/Github.vue'
+import LinkIcon from '@/assets/logos/Link.vue'
 class Post {
-  constructor(title, tools, desc) {
+  constructor(title, repo, link, tools, desc) {
     this.title = title;
+    this.repo = repo;
+    this.link = link;
     this.tools = tools;
     this.desc = desc;
   }
@@ -26,12 +42,16 @@ class Post {
 
 const postList = [
       new Post(
-        'Kids Coding', 
+        'Kids Coding',
+        'https://github.com/Kds-Coding/Kds-Coding-repo',
+        'https://kids-coding-7790c.web.app/',
         'VueJs / HTML&CSS / Bootstrap / Firebase', 
         'A learning platform for children to learn about programming. A website giving both the theoretical bases of algorithms and web programming.'
       ),
       new Post(
         'Never Alone', 
+        'https://github.com/fahimgha/AppMob-NeverAlone',
+        '',
         'Java / AndroidStudio / Firebase', 
         'Application allowing to locate his friends in real time with his phone. It is a real-time GPS tracking application using the Google Maps API. '
       ),
@@ -39,6 +59,10 @@ const postList = [
 export default {
   name: 'Projects',
   el: '#projects',
+  components:{
+    GithubIcon,
+    LinkIcon
+  },
   data() { 
   return {
     keyword: '',
@@ -79,7 +103,14 @@ div#projects {
     flex-wrap: wrap;
     padding-top: 0px;
   }
-
+.header-card{
+  display: flex;
+  justify-content: space-between;
+}
+.link{
+  display: flex;
+  justify-content: flex-end;
+}
   .card {
     width: 350px;
     height: 250px;
