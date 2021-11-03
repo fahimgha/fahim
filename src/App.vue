@@ -59,10 +59,11 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
 
 :root {
-  --background-color-primary:#191919;
+  //--background-color-primary:#191919;
+  --background-color-primary:#202023;
   --background-color-secondary: #848582;
   --text-primary-color: #ffffff;
   --text-secondary-color:#FFC56E;
@@ -79,7 +80,9 @@ body {
   margin: 0;
 }
 #app { 
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  //font-family: 'Quicksand', sans-serif;
+  //font-family: 'NTR', sans-serif;
   color:var(--text-primary-color);
   height: 100vh;
   display: flex;
@@ -88,7 +91,22 @@ body {
 }
 
 h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 40pt;
+}
+h2{
+  font-family: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", 
+    "Ubuntu", "Cantarell", "Fira Sans", 
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 250;
+  line-Height: 150%;
+  word-spacing: 2px;
+  
+  
+  
+
 }
 
 // .text-section {
@@ -96,5 +114,4 @@ h1{
 //   overflow: scroll;
 //   -webkit-overflow-scrolling: touch;
 // }
-
 </style>

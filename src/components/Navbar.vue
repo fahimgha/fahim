@@ -58,7 +58,7 @@ export default {
   position: fixed;
   right: 0;
   padding-right: 3%;
-  bottom: 40%; //test avec 10%
+  bottom: 10%; //test avec 10%
 }
 a {
   display: flex;
@@ -66,9 +66,9 @@ a {
   text-align: right;
   letter-spacing: 0em;
   line-height: 1.6em;
-  font-size: 19px;
+  font-size: 16px;
   padding: 0.2em;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
   text-decoration: none !important;
   color: var(--text-secondary-color);

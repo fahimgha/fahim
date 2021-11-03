@@ -1,10 +1,20 @@
 <template>
   <div id="about">
-    <h1 data-aos="fade-up" class="section-title">/About Me</h1>
-    <h1 data-aos="fade-up" data-aos-delay="100" class="about-desc ">My name is Fahim GHARSA. I studying Computer Science at Paris.<br> I am did 2 months internship as an trainee web developper.
-    I'm interested in Web developpement and Web design. I like design and code beautifully simple things. I'm constantly in the process of learning. Over the past two years, I've worked hard to enhance my skills, using the following tools :<br>
-    </h1>
-    <h3 data-aos="fade-up" data-aos-delay="100">NodeJs, Java, PHP, Vuejs, Javascript, HTML & CSS</h3>
+    <h1 class="section-title">/About Me</h1>
+    <div class="box-about">
+      <div class="box-descabt">
+      <h2 class="about-desc ">I'm a Software engineering student at IUT de Paris. I'm interested in Web developpement and Web design. I like design and code beautifully simple things. 
+        I did intership as a Web Developer in may 2021, and ever since, it has been a wonderful adventure for me.
+        If I’m not doing anything coding-related, I enjoy walking, watching anime or spending time with my family.
+        I'm constantly in the process of learning. Over the past two years, I've worked hard to enhance my skills, using the following tools :
+      </h2>
+
+      </div>
+      <div class="box-image"><img src="../assets/fahimm.jpeg" alt="Image Profile"></div>
+      
+      
+    </div>
+          <h3>• Java • Javascript • PHP • Vuejs • HTML • CSS • Firebase • Git/Github</h3>
   </div>
 </template>
 
@@ -53,20 +63,30 @@ export default {
 
 }
 #about{
-  padding-left: 10%;
+  padding-left: 15%;
   padding-top: 7%;
-  padding-right: 27%;
+  padding-right: 25%;
 }
 .section-title{
   color: var(--text-secondary-color);
-  font-size: 45px;
+  font-size: 25px;
 }
 .about-desc{
-  font-size: 19px;
-  line-height: 1.7em;
-  font-weight: 400;
+  text-align: justify;
+  padding-right:7%;
 }
-
+.box-about {
+  display: flex;
+  align-items: center;
+}
+img{
+  border-color: whiteAlpha;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 150px;
+  border-radius:50%;
+  display: inline-block;
+}
 @media only screen and (max-width: 600px) {
   #about{
     padding-right: 40px;

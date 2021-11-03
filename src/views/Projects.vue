@@ -1,8 +1,8 @@
 <template>
 <div id="projects">
   
-      <h1 data-aos="fade-up" class="section-title">/My Projects</h1>
-        <div data-aos="fade-left" data-aos-delay="300"  class="wrapper">
+      <h1 class="section-title">/My Projects</h1>
+        <div class="wrapper">
           <div   :key="post.id" class="card" v-for="post in filteredList">
             <div class="header-card">
             <div class="box">
@@ -89,7 +89,7 @@ export default {
 <style lang="scss">
 
 #projects {
-  padding-left: 10%;
+  padding-left: 15%;
   padding-top: 5%;
 }
 

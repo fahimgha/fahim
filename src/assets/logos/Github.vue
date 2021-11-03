@@ -1,5 +1,5 @@
 <template>
-  <svg     
+  <svg class="iconGithub"
   :width="width"
   :height="height"
   viewBox="0 0 70 70" 
@@ -26,7 +26,7 @@ export default {
     },
     iconColor: {
       type: String,
-      default: '#FFC56E'
+      default: '#ffffff'
     }
   }
 }
