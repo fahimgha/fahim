@@ -84,12 +84,7 @@ export default {
 .email{
   margin-top: 0;
 }
-a{
-  color: var(--text-secondary-color);
-}
-a:hover{
-  color: var(--text-primary-color);
-}
+
 
 @media only screen and (max-width: 600px) {
   #contact{

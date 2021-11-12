@@ -1,32 +1,28 @@
 <template>
   <div id="credits">
-          <div className="end-credits">
-            <div>Built and designed by Fahim Gharsa. </div>
-            <div>All rights reserved. ©</div>
-          </div>
+    <div className="end-credits">
+      <div>Built and designed by Fahim Gharsa.</div>
+      <div>All rights reserved. ©</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  setup() {
-    
-  },
-}
+  setup() {},
+};
 </script>
 
 <style lang="scss">
-
-#credits{
+#credits {
   display: flex;
   align-items: center;
   padding-top: 50px;
   padding-bottom: 10px;
 }
 
-.end-credits{
+.end-credits {
   text-align: center;
   width: 100%;
 }
-
 </style>

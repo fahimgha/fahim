@@ -1,38 +1,38 @@
-<template> 
-    <div class="progress-bar">
+<template>
+  <div class="progress-bar">
     <div
       class="filled-bar"
       :style="{ transform: `translate3d(-${(1 - value) * 100}%, 0, 0)` }"
-    ><span class="text">
-      {{ percentageText }}
-    </span></div>
+    >
+      <span class="text">
+        {{ percentageText }}
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'progressbar',
-    props: {
+  name: "progressbar",
+  props: {
     value: {
       type: Number,
-      default: 0.3
-    }
+      default: 0.3,
+    },
   },
   computed: {
-    percentageText () {
-      return `${Math.round(this.value * 100)}%`
-    }
-  }
-}
+    percentageText() {
+      return `${Math.round(this.value * 100)}%`;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-
 ::-webkit-scrollbar {
-    display: block;
+  display: block;
 }
 .progress-bar {
-  
   position: relative;
   overflow: hidden;
   border-radius: 3px 3px 0 0;

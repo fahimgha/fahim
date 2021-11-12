@@ -1,35 +1,33 @@
 <template>
-<div id="projects">
-  
-      <h1 class="section-title">/My Projects</h1>
-        <div class="wrapper">
-          <div   :key="post.id" class="card" v-for="post in filteredList">
-            <div class="header-card">
-            <div class="box">
-              <h2 class="project-name">{{ post.title }}</h2></div>
-              <div class="link">
-                <a :href="post.repo"><GithubIcon
-                width="40"
-                height="50"
-                iconColor='#ffffff'/></a>
-                <a v-if="post.link.length" :href="post.link"><LinkIcon
-                width="30"
-                height="50"
-                iconColor='#ffffff'/></a></div>
-                </div>
-            <h3 class="tools">{{ post.tools }}</h3>
-            <p class="descproj">{{ post.desc }}</p>
+  <div id="projects">
+    <div class="section-header">
+      <h1 class="section-title">Projects</h1>
+    </div>
+    <div class="wrapper">
+      <div :key="post.id" class="card" v-for="post in filteredList">
+        <div class="header-card">
+          <div class="box-project">
+            <h2 class="project-name">{{ post.title }}</h2>
+          </div>
+          <div class="link2">
+            <a :href="post.repo"
+              ><GithubIcon width="30" height="40" iconColor="#ffffff"
+            /></a>
+            <a v-if="post.link.length" :href="post.link"
+              ><LinkIcon width="20" height="40" iconColor="#ffffff"
+            /></a>
           </div>
         </div>
-    
-    
-</div>
-
+        <h3 class="tools">{{ post.tools }}</h3>
+        <h2 class="descproj">{{ post.desc }}</h2>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import GithubIcon from '@/assets/logos/Github.vue'
-import LinkIcon from '@/assets/logos/Link.vue'
+import GithubIcon from "@/assets/logos/Github.vue";
+import LinkIcon from "@/assets/logos/Link.vue";
 class Post {
   constructor(title, repo, link, tools, desc) {
     this.title = title;
@@ -41,59 +39,64 @@ class Post {
 }
 
 const postList = [
-      new Post(
-        'Kids Coding',
-        'https://github.com/Kds-Coding/Kds-Coding-repo',
-        'https://kids-coding-7790c.web.app/',
-        'VueJs / HTML&CSS / Bootstrap / Firebase', 
-        'A learning platform for children to learn about programming. A website giving both the theoretical bases of algorithms and web programming.'
-      ),
-      new Post(
-        'Never Alone', 
-        'https://github.com/fahimgha/AppMob-NeverAlone',
-        '',
-        'Java / AndroidStudio / Firebase', 
-        'Application allowing to locate his friends in real time with his phone. It is a real-time GPS tracking application using the Google Maps API. '
-      ),
+  new Post(
+    "Kids Coding",
+    "https://github.com/Kds-Coding/Kds-Coding-repo",
+    "https://kids-coding-7790c.web.app/",
+    "VueJs / HTML&CSS / Bootstrap / Firebase",
+    "A learning platform for children to learn about programming. A website giving both the theoretical bases of algorithms and web programming."
+  ),
+  new Post(
+    "Never Alone",
+    "https://github.com/fahimgha/AppMob-NeverAlone",
+    "",
+    "Java / AndroidStudio / Firebase",
+    "Application allowing to locate his friends in real time with his phone. It is a real-time GPS tracking application using the Google Maps API. "
+  ),
+  new Post(
+    "Novelyo",
+    "https://github.com/QuentinFrc/Novelyo",
+    "",
+    "Shopify / NodeJs / Javascript / HTML/CSS / Postgresql",
+    "Creation of a digital marketing agency allowing self-training on the functioning of the web marketing, project management and business creation."
+  ),
 ];
 export default {
-  name: 'Projects',
-  el: '#projects',
-  components:{
+  name: "Projects",
+  el: "#projects",
+  components: {
     GithubIcon,
-    LinkIcon
+    LinkIcon,
   },
-  data() { 
-  return {
-    keyword: '',
-    posts: postList,
-    styles: {
-      backgroundColor: 'red'
-    }
-  }
-    
+  data() {
+    return {
+      keyword: "",
+      posts: postList,
+      styles: {
+        backgroundColor: "red",
+      },
+    };
   },
-  methods: { 
+  methods: {
     toggleOnOff() {
       this.onOff = !this.onOff;
     },
   },
   computed: {
     filteredList() {
-      return this.posts.filter((post) => post.title.toLowerCase().includes(this.keyword.toLowerCase()));
-    }
-  }
-}
+      return this.posts.filter((post) =>
+        post.title.toLowerCase().includes(this.keyword.toLowerCase())
+      );
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-
 #projects {
   padding-left: 15%;
   padding-top: 5%;
 }
-
-
 div#projects {
   display: flex;
   flex-direction: column;
@@ -103,63 +106,52 @@ div#projects {
     flex-wrap: wrap;
     padding-top: 0px;
   }
-.header-card{
-  display: flex;
-  justify-content: space-between;
-}
-.link{
-  display: flex;
-  justify-content: flex-end;
-}
+  .header-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .link2 {
+    display: flex;
+    justify-content: flex-end;
+  }
   .card {
     width: 350px;
-    height: 250px;
-    border: 2px solid #FFC56E;
+    height: 270px;
+    border: 2px solid #ffc56e;
     box-sizing: border-box;
     border-radius: 10px;
     margin: 12px;
-    transition: .15s all ease-in-out;
-    &:hover { 
+    transition: 0.15s all ease-in-out;
+    &:hover {
       transform: scale(1.1);
     }
-    .box{
+    .box-project {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      margin-top: 17px;
-      margin-left: 22px;
-      width: 162px;
+      padding: 0 10px;
       height: 43px;
-      border: 2px solid #FFC56E;
+      border: 2px solid #ffc56e;
       box-sizing: border-box;
       border-radius: 10px;
-      .project-name{
-        color: white;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 25px;
-        line-height: 31px;
-        font-weight: bold;
-        font-style: normal;
+      .project-name {
+        margin: 0%;
+        font-size: 20px;
+        text-indent: 0;
       }
     }
-    .tools{
-      margin-top: 14px;
-      margin-left: 25px;
-      color: white;
-      font-family: 'Quicksand', sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 11px;
-      line-height: 13px;
+    .tools {
+      display: flex;
+      justify-content: center;
+      text-indent: 1em;
+      font-size: 12px;
     }
-    .descproj{
-      margin: 8px 20px 0 25px;
-      color: white;
-      font-family: 'Quicksand', sans-serif;
-      font-style: normal;
-      font-size: 18px;
-      line-height: 24px;
+    .descproj {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
     }
     a {
       text-decoration: none;
@@ -180,17 +172,16 @@ div#projects {
   }
 }
 @media only screen and (max-width: 600px) {
-  #projects{
+  #projects {
     padding-right: 40px;
     padding-left: 40px;
-    
   }
-  .wrapper{
+  .wrapper {
     align-items: center;
     justify-content: center;
   }
-  .section-title{
-  font-size: 25px;
+  .section-title {
+    font-size: 25px;
   }
 }
 </style>
